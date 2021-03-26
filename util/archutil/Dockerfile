@@ -35,7 +35,7 @@ RUN riscv64-linux-gnu-as --noexecstack -o exit.o exit.riscv64.s && riscv64-linux
 
 FROM base AS exit-s390x
 COPY fixtures/exit.s390x.s .
-RUN s390x-linux-gnu-as --noexecstack -o exit.o exit.s390x.s && s390x-linux-gnu-ld -o exit -s exit.o
+RUN s390x-linux-gnu-as -o exit.o exit.s390x.s && s390x-linux-gnu-ld -o exit -s exit.o
 
 FROM base AS exit-ppc64le
 COPY fixtures/exit.ppc64le.s .
