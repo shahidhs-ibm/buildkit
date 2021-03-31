@@ -1,4 +1,4 @@
-module github.com/moby/buildkit
+module github.com/shahidhs-ibm/buildkit
 
 go 1.13
 
